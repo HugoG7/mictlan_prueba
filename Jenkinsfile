@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh 'npm run install'
+        sh 'npm install'
         emailext(subject: 'Installed Success', body: 'The current installation was correct, continuing with process...', attachLog: true, to: 'hugo')
       }
     }
